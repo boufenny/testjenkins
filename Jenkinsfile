@@ -18,4 +18,12 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo 'pipeline ended'
+        }
+        failure {
+            mail to: yassine.boufenneche@esme.fr, subject: 'The Pipeline failed :('
+        }
+    }
 }
