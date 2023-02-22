@@ -23,7 +23,9 @@ pipeline {
             echo 'pipeline ended'
         }
         failure {
-            mail to: yassine.boufenneche@esme.fr, subject: 'The Pipeline failed :('
+            mail to: 'yassine.boufenneche@esme.fr',
+            subject: 'Pipeline failed',
+            body: 'Pipeline has failed :('
         }
     }
 }
